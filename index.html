@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather API project</title>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <main class="bg-gray-200 grid grid-cols-1 place-items-center h-screen overflow-auto place-content-center">
+      <section class=" w-1/2 min-h-[500px] bg-white hover:drop-shadow-2xl group border border-transparent hover:border-gray-300 rounded p-5 flex flex-col place-items-center place-content-center gap-5">
+          <h2 class="group-hover:text-blue-700">Weather API</h2>
+
+
+          <button class="hidden group-hover:bg-blue-900 group-hover:border group-hover:border-gray-500 transition-all duration-150 hover:duration-150 group-hover:duration-150 font-medium text-sm text-center w-max bg-slate-800 text-white py-2 px-5 rounded block relative" id="getApiButton">Click to get Weather Information</button>
+
+          <form action="./index.php" method="GET" class="">
+            <div class="flex justify-between gap-5">
+              <label for="lat" class="flex gap-1 flex-col">
+                <b class="text-sm">Lat</b>
+                <input type="text" placeholder="Latitude" name="lat" id="lat" class="py-2 px-5 border border-gray-200 rounded">
+              </label>
+  
+              <label for="long" class="flex gap-1 flex-col">
+                <b class="text-sm">Long</b>
+                <input type="text" placeholder="Longtitude" name="long" id="long" class="py-2 px-5 border border-gray-200 rounded">
+              </label>
+            </div>
+
+            <button type="submit" class="mt-2 transition-all duration-150 hover:duration-150  font-medium text-sm text-center w-max bg-slate-800 text-white py-2 px-5 rounded block relative" >Get Result</button>
+          </form>
+          <div id="results">
+
+          </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
